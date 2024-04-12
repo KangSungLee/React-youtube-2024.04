@@ -32,7 +32,7 @@ export default function Videos() {
       {videos && (
         <Grid container spacing={1}>
           {videos.map((video, index) => (
-            <Grid item xs={12} sm={6} md={4} lg={3} key={index}>
+            <Grid item xs={12} sm={6} md={4} lg={3} key={index} >
               <VideoCard video={video} />
             </Grid>
           ))}

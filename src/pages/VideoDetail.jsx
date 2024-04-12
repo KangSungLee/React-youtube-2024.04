@@ -8,14 +8,21 @@ import Box from '@mui/material/Box';
 export default function VideoDetail() {
   const { state : {video} } = useLocation();
   const { title, channelId, channelTitle, description } = video.snippet;
+  const videoId = typeof(video.id) === 'string' ? video.id : video.id.videoId;
+
+  function decodeHTMLEntities(text) {
+    const element = document.createElement('div');
+    element.innerHTML = text;
+    return element.textContent;
+  }
 
   return (
     <Grid container spacing={2}>
       <Grid item xs={12} md={9} >
         <iframe id='player' type='text/html' width='100%' height='600'
-          src={`https://www.youtube.com/embed/${(video.id.videoId == null)? video.id : video.id.videoId}`} title={title} />
+          src={`https://www.youtube.com/embed/${videoId}`} title={title} />
         <div>
-          <h3>{title}</h3>
+          <h3>{decodeHTMLEntities(title)}</h3>
           <ChannelInfo id={channelId} name={channelTitle} />
           <pre>{description}</pre>
         </div>

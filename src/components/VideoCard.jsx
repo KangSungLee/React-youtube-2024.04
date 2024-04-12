@@ -12,14 +12,28 @@ export default function VideoCard({ video }) {
   // if (typeof(video.id) !== 'string' && video.id.kind === 'youtube#channel')
   //   return;
   const videoId = typeof(video.id) === 'string' ? video.id : video.id.videoId;
+
+  function decodeHTMLEntities(text) {
+    const element = document.createElement('div');
+    element.innerHTML = text;
+    return element.textContent;
+  }
+
   return (
     <Card 
       onClick={() => { navigate(`/videos/watch/${videoId}`, {state: {video} }) }}
     >
-      <CardContent>
-        <img src={thumbnails.medium.url} alt={title} />
+      <CardContent style={{height: 300}}>
+        <img src={thumbnails.medium.url} alt={title} style={{height: 200}}/>
         <div>
-          <Typography sx={{fontSize: 16, fontWeight: 'bold'}}>{title}</Typography>
+          <Typography sx={{ fontSize: 16,
+            fontWeight: 'bold',
+            whiteSpace: 'normal',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical'}}>{decodeHTMLEntities(title)}</Typography>
           <Typography>{channelTitle}</Typography>
           <Typography>{formatAgo(publishedAt, 'ko')}</Typography>
         </div>
