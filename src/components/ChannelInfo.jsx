@@ -13,7 +13,7 @@ export default function ChannelInfo({ id, name }) {
         const response = await axios.get(`https://www.googleapis.com/youtube/v3/channels?id=${id}&key=${process.env.REACT_APP_YOUTUBE_API_KEY}&part=statistics`);
         const { data } = response;
         const { items } = data;
-        const subscriberCount = items[0]?.statistics?.subscriberCount;
+        const subscriberCount = items[0].statistics.subscriberCount;
         setSubscriberCount(subscriberCount);
       } catch (error) {
         console.error('Error fetching subscriber count:', error);
