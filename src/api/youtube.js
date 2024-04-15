@@ -10,8 +10,8 @@ export const useVideo = keyword => {
     queryFn: async () => {
       const uri = keyword ? keywordUri + keyword : popularUri;
       return axios
-              // .get(`/data/${keyword ? 'search' : 'popular'}.json`)
-              .get(uri)
+              .get(`/data/${keyword ? 'search' : 'popular'}.json`)
+              // .get(uri)
               .then(res => res.data.items);
               // .then(res => keyword ? res.data.items.shift() : res.data.items);
     },
