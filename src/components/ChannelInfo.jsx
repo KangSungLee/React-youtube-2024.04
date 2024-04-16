@@ -24,7 +24,7 @@ export default function ChannelInfo({ id, name }) {
   }, [id]);
 
   return (
-    <Stack direction={'row'} sx={{alignItems: 'center'}} spacing={1} >
+    <Stack direction={'row'} sx={{alignItems: 'center'}} spacing={1}>
       <a href={`https://www.youtube.com/channel/${id}`}>
         {url && <img src={url} alt={name} height={64} width={64} style={{borderRadius: 50}}/>}
       </a>
