@@ -26,11 +26,11 @@ export default function SignIn() {
         <input type="password" name='password' value={userInfo.password} placeholder="패스워드"
           onChange={handleChange} /><br />
         <button onClick={handleSubmit}>로그인</button>
-      </form><br />
+      </form><br /><br />
       <span>아직 계정이 없으신가요?</span>
       <Link to='/signUp'>사용자 등록</Link><br /><br />
       <button onClick={handleGithub}>깃허브 로그인</button>
-
+      
     </div>
   )
 }
