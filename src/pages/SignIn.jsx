@@ -30,7 +30,6 @@ export default function SignIn() {
       <span>아직 계정이 없으신가요?</span>
       <Link to='/signUp'>사용자 등록</Link><br /><br />
       <button onClick={handleGithub}>깃허브 로그인</button>
-      
     </div>
   )
 }
