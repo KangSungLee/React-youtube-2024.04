@@ -25,7 +25,7 @@ function DeliveryTracker() {
     <div>
       <form onSubmit={handleSubmit} action="http://info.sweettracker.co.kr/tracking/5" method="post">
         <div className="form-group">
-          <input type="hidden" className="form-control" name="t_key" value={'Wgo8jPI7FYIqrP8sekZlow'}/>
+          <input type="hidden" className="form-control" name="t_key" value={''}/>
         </div>
         <div className="form-group">
           <input type="hidden" className="form-control" name="t_code" value={'04'}/>
