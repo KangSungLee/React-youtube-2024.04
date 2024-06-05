@@ -31,5 +31,7 @@ export default function VideoDetail() {
         <RelatedVideo id={channelId} name={channelTitle} />
       </Grid>
     </Grid>
+
+    
   )
 }

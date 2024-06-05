@@ -25,10 +25,12 @@ function DeliveryTracker() {
     <div>
       <form onSubmit={handleSubmit} action="http://info.sweettracker.co.kr/tracking/5" method="post">
         <div className="form-group">
-          <input type="hidden" className="form-control" name="t_key" value={''}/>
+          {/* api키 */}
+          <input type="text" className="form-control" name="t_key" value={'Wgo8jPI7FYIqrP8sekZlow'}/>
         </div>
         <div className="form-group">
-          <input type="hidden" className="form-control" name="t_code" value={'04'}/>
+          {/* 택배사 */}
+          <input type="text" className="form-control" name="t_code" value={'04'}/>  
         </div>
         <div className="form-group">
           <label htmlFor="t_invoice">운송장 번호</label>

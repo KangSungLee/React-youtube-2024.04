@@ -23,7 +23,7 @@ export default function VideoCard({ video }) {
     <Card 
       onClick={() => { navigate(`/videos/watch/${videoId}`, {state: {video} }) }}
     >
-      <CardContent style={{height: 300}}>
+      <CardContent style={{height: 320}}>
         <img src={thumbnails.medium.url} alt={title} style={{height: 200}}/>
         <div>
           <Typography sx={{ fontSize: 16,
