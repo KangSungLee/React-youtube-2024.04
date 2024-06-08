@@ -37,8 +37,8 @@ export default function SignUp() {
         <button onClick={handleSubmit}>사용자 등록</button>
       </form><br />
       <span>계정이 있으신가요?</span>
-      <Link to='/signIn'>로그인</Link><br /><br />
-      <button onClick={handleGithub}>깃허브 로그인</button><br /><br />
+      <Link to='/signIn'>로그인</Link><br /> <br/>
+      <button onClick={handleGithub}>깃허브 로그인</button>
       {file && (<img src={URL.createObjectURL(file)} alt='photo' height={200}/>)}
     </div>
   )
